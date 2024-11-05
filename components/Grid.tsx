@@ -6,20 +6,18 @@ const Grid = () => {
   return (
   <section id="about">
     <BentoGrid>
-      {gridItems.map(({id, title, description, className,
-          img, imgClassName, titleClassName, spareImg, test
-      }) => (
+      {gridItems.map((item, i) => (
         <BentoGridItem
-        id={id}
-        key={id}
-        title={title}
-        description={description}
-        className={className} //classNames in gridItems
+        id={item.id}
+        key={i}
+        title={item.title}
+        description={item.description}
+        className={item.className} //classNames in gridItems
                                     //array get called and apply tailwind
-        img={img}
-        imgClassName = {imgClassName}
-        titleClassName = {titleClassName}
-        spareImg = {spareImg}
+        img={item.img}
+        imgClassName = {item.imgClassName}
+        titleClassName = {item.titleClassName}
+        spareImg = {item.spareImg}
         />
 
       ))}
